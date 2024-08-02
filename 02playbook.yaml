@@ -1,0 +1,9 @@
+- name: variable
+  hosts: localhost
+  become: yes
+  vars:
+    name: "mani"
+  tasks:
+  - name: variables 
+    ansible.builtin.debug:
+      msg: "hi this {{name}}"
