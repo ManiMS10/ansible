@@ -2,10 +2,11 @@
   hosts: localhost
   become: yes
   tasks:
-  - name: start an instance with public ip
+  - name: install apache httpd
     ansinle.buitin.package:
-    instance type: t2 micro
-    security group: default
-    region: us-east-1a
-    network:
-      assign_public_ip: true
+      name: apache
+      state: present
+  - name: run apache
+    ansible.builtin.service:
+      name: apache
+      state: started
