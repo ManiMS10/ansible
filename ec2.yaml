@@ -2,11 +2,11 @@
   hosts: web
   become: yes
   tasks:
-  - name: install apache package
-    ansinle.builtin.package:
-      name: apache
+  - name: install apache httpd
+    ansinle.builtin.apt:
+      name: apache 2
       state: present
   - name: run apache
     ansible.builtin.service:
-      name: apache
+      name: apache 2
       state: started
