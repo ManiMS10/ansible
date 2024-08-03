@@ -1,8 +1,8 @@
 - name: creating ec2 instance
-  hosts: localhost
+  hosts: web
   become: yes
   tasks:
-  - name: install apache httpd
+  - name: install apache package
     ansinle.builtin.package:
       name: apache
       state: present
