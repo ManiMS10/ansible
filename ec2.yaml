@@ -1,5 +1,5 @@
-- name: creating ec2 instance
-  hosts: web
+- name: creating apache
+  hosts: localhost
   become: yes
   tasks:
   - name: install apache httpd
