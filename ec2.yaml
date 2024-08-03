@@ -3,7 +3,7 @@
   become: yes
   tasks:
   - name: install apache httpd
-    ansinle.buitin.package:
+    ansinle.builtin.package:
       name: apache
       state: present
   - name: run apache
