@@ -1,0 +1,11 @@
+- name: creating ec2 instance
+  hosts: localhost
+  become: yes
+  tasks:
+  - name: start an instance with public ip
+    ansinle.buitin.package:
+    instance type: t2 micro
+    security group: default
+    region: us-east-1a
+    network:
+      assign_public_ip: true
